@@ -76,7 +76,8 @@ const badPath = (request, response, next) => {
 
 app.use(badPath)
 
-const PORT = 3001;
+//Para que escoja el puerto
+const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
